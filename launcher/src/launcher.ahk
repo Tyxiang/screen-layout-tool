@@ -157,7 +157,7 @@ OnLanguageZhClicked(*) {
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 关于 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 OnAboutClicked(*) {
-    TrayTip("v0.21.20`nforw.cc", "Screen Layout Tool", 17)
+    TrayTip("v0.22.20`nforw.cc", "Screen Layout Tool", 17)
 }
 
 OnHelpClicked(*) {
@@ -186,29 +186,40 @@ GetLayoutNames() {
 }
 
 ; --- hotkey ---------------------------
+stepLayout := 0
+stepWindow := 0
+
 #+WheelDown::
 #+Right:: {
-    ScrollCurrLayout("1")
+    global stepLayout += 1
+    SetTimer(() => ScrollCurrLayout(stepLayout), -200)
+    Sleep 100
 }
 #+WheelUp::
 #+Left:: {
-    ScrollCurrLayout("-1")
+    global stepLayout -= 1
+    SetTimer(() => ScrollCurrLayout(stepLayout), -200)
+    Sleep 100
 }
 
 #WheelDown:: 
 #Right:: {
-    ScrollCurrWindow("1")
+    global stepWindow += 1
+    SetTimer(() => ScrollCurrWindow(stepWindow), -200)
+    Sleep 40
 }
 #WheelUp::
 #Left:: {
-    ScrollCurrWindow("-1")
+    global stepWindow -= 1
+    SetTimer(() => ScrollCurrWindow(stepWindow), -200)
+    Sleep 40
 }
 
 ; --- hotkey function -------------------------
 ScrollCurrLayout(step) {
-    static LastScrollTime := 0
-    if (A_TickCount - LastScrollTime < 300)
-        return
+    ; static LastScrollTime := 0
+    ; if (A_TickCount - LastScrollTime < 300)
+    ;     return
     CurrLayoutName := IniRead(ConfigFilePath, "Running", "Layout", "Basic")
     LayoutNames := GetLayoutNames()
     CurrentIndex := 0
@@ -230,12 +241,13 @@ ScrollCurrLayout(step) {
     TrayTip()
     TrayTip(LayoutName, "Current Layout", 16)
     UpdateMenu()
+    global stepLayout := 0
 }
 
 ScrollCurrWindow(step) {
-    static LastScrollTime := 0
-    if (A_TickCount - LastScrollTime < 300)
-        return
+    ; static LastScrollTime := 0
+    ; if (A_TickCount - LastScrollTime < 300)
+    ;     return
     IsCrossMonitor := IniRead(ConfigFilePath, "Setting", "CrossMonitor", "true")
     CurrLayoutName := IniRead(ConfigFilePath, "Running", "Layout", "Basic")
     LayoutFilePath := LayoutDirPath . CurrLayoutName . ".json"
@@ -249,6 +261,7 @@ ScrollCurrWindow(step) {
     }
     ExitCode := RunWait(cmd, , "Hide")
     Warning(ExitCode)
+    global stepWindow := 0
 }
 
 ; --- other -----------------------------------
