@@ -1,0 +1,42 @@
+{
+    "author": "Tyx",
+    "version": "1.0",
+    "description": "Layout plan for data analysis. For laptop + main monitor. The main screen is a left and right split screen for code editing, previewing results, or comparing results. The secondary screen overlays documents, chat windows, and file managers.",
+    "positions": [
+        {
+            "left": 0,
+            "width": 50,
+            "top": 0,
+            "height": 100,
+            "monitor": 2
+        },
+        {
+            "left": 50,
+            "width": 50,
+            "top": 0,
+            "height": 100,
+            "monitor": 2
+        },
+        {
+            "left": 0,
+            "width": 94,
+            "top": 0,
+            "height": 90,
+            "monitor": 1
+        },
+        {
+            "left": 3,
+            "width": 94,
+            "top": 5,
+            "height": 90,
+            "monitor": 1
+        },
+        {
+            "left": 6,
+            "width": 94,
+            "top": 10,
+            "height": 90,
+            "monitor": 1
+        } 
+    ]
+}

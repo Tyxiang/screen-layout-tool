@@ -1,0 +1,50 @@
+{
+    "author": "Tyx",
+    "version": "1.0",
+    "description": "Trader layout plan. Dual screen. News, watching, placing orders, and doing research do not interfere with each other.",
+    "positions": [
+        {
+            "left": 0,
+            "width": 25,
+            "top": 0,
+            "height": 100,
+            "monitor": 1
+        },
+        {
+            "left": 25,
+            "width": 75,
+            "top": 0,
+            "height": 100,
+            "monitor": 1
+        },
+        {
+            "right": 0,
+            "width": 70,
+            "top": 0,
+            "height": 90,
+            "monitor": 2
+        },
+        {
+            "right": 5,
+            "width": 70,
+            "top": 5,
+            "height": 90,
+            "monitor": 2
+        },
+        {
+            "right": 10,
+            "width": 70,
+            "top": 10,
+            "height": 90,
+            "monitor": 2
+        },
+        {
+            "left": 0,
+            "width": 70,
+            "top": 0,
+            "height": 100,
+            "monitor": 2
+        }
+    ],
+    "download-times": 55
+}

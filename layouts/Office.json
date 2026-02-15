@@ -1,0 +1,57 @@
+{
+    "author": "Tyx",
+    "version": "1.0",
+    "description": "Multi-tasking office layout solution. It is divided into main area and auxiliary area. The main area are used to open document editors, browsers, etc. The auxiliary area is used to open the mail client and instant messenger at the same time. The auxiliary area adopts a stacked design, making it easy to switch between them while making full use of the screen.",
+    "positions": [
+        {
+            "left": 0,
+            "width": 50,
+            "top": 0,
+            "height": 100,
+            "monitor": 0
+        },
+        {
+            "left": 0,
+            "width": 60,
+            "top": 0,
+            "height": 100,
+            "monitor": 0
+        },
+        {
+            "left": 0,
+            "width": 91,
+            "top": 0,
+            "height": 100,
+            "monitor": 0
+        },
+        {
+            "right": 0,
+            "width": 50,
+            "top": 0,
+            "height": 100,
+            "monitor": 0
+        },
+        {
+            "right": 0,
+            "width": 22,
+            "top": 0,
+            "height": 88,
+            "monitor": 0
+        },
+        {
+            "right": 3,
+            "width": 22,
+            "top": 6,
+            "height": 88,
+            "monitor": 0
+        },
+        {
+            "right": 6,
+            "width": 22,
+            "top": 12,
+            "height": 88,
+            "monitor": 0
+        }
+    ],
+    "download-times": 233
+}

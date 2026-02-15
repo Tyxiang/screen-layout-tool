@@ -1,0 +1,43 @@
+{
+    "author": "Tyx",
+    "version": "1.0",
+    "description": "Live gaming layout solution. Simultaneously display game window, live software, chat window, monitoring tool. The game window occupies the main area in the center, other software occupies the secondary area on both sides, and all windows do not block each other.",
+    "positions": [
+        {
+            "left": 0,
+            "width": 20.5,
+            "top": 0,
+            "height": 50,
+            "monitor": 0
+        },
+        {
+            "left": 0,
+            "width": 20.5,
+            "top": 50,
+            "height": 50,
+            "monitor": 0
+        },
+        {
+            "left": 20,
+            "width": 60,
+            "top": 0,
+            "height": 100,
+            "monitor": 0
+        },
+        {
+            "right": 0,
+            "width": 20.5,
+            "top": 0,
+            "height": 50,
+            "monitor": 0
+        },
+        {
+            "right": 0,
+            "width": 20.5,
+            "top": 50,
+            "height": 50,
+            "monitor": 0
+        }
+    ],
+    "download-times": 116
+}

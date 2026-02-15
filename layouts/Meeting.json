@@ -1,0 +1,64 @@
+{
+    "author": "Tyx",
+    "version": "1.0",
+    "description": "A layout solution for meeting. For laptop + main monitor. Primary monitor for office. The secondary monitor for meeting.",
+    "positions": [
+        {
+            "left": 0,
+            "width": 50,
+            "top": 0,
+            "height": 100,
+            "monitor": 2
+        },
+        {
+            "left": 0,
+            "width": 60,
+            "top": 0,
+            "height": 100,
+            "monitor": 2
+        },
+        {
+            "left": 0,
+            "width": 91,
+            "top": 0,
+            "height": 100,
+            "monitor": 2
+        },
+        {
+            "right": 0,
+            "width": 50,
+            "top": 0,
+            "height": 100,
+            "monitor": 2
+        },
+        {
+            "right": 0,
+            "width": 22,
+            "top": 0,
+            "height": 88,
+            "monitor": 2
+        },
+        {
+            "right": 3,
+            "width": 22,
+            "top": 6,
+            "height": 88,
+            "monitor": 2
+        },
+        {
+            "right": 6,
+            "width": 22,
+            "top": 12,
+            "height": 88,
+            "monitor": 2
+        },
+        {
+            "left": 0,
+            "width": 100,
+            "top": 0,
+            "height": 100,
+            "monitor": 1
+        }
+    ],
+    "download-times": 157
+}
