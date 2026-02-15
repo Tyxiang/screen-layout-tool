@@ -6,9 +6,7 @@ Screen Layout Tool is a open source software to help you organize and arrange wi
 
 Screen Layout Tool committed to making multi-screen window management more efficient, precise and smooth.
 
-<video controls="" muted="" autoplay="" loop="" width="100%">
-    <source src="videos/demo.mp4" type="video/mp4">
-</video>
+[Demo video](videos/demo.mp4)
 
 ## 2. It is easy to use
 
