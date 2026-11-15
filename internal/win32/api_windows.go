@@ -54,6 +54,7 @@ var (
 	nextHook         = user32.NewProc("CallNextHookEx")
 	getAsyncKeyState = user32.NewProc("GetAsyncKeyState")
 	keybdEvent       = user32.NewProc("keybd_event")
+	sendInput        = user32.NewProc("SendInput")
 	setWinEventHook  = user32.NewProc("SetWinEventHook")
 	unhookWinEvent   = user32.NewProc("UnhookWinEvent")
 	registerMessage  = user32.NewProc("RegisterWindowMessageW")

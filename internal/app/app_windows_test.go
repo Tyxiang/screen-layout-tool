@@ -61,7 +61,7 @@ func TestNativeApplicationStartupAndShutdown(t *testing.T) {
 			t.Error("默认不应启用自动启动")
 		}
 		return nil
-	})
+	}, func() (func(), bool, error) { return func() {}, true, nil })
 	if err != nil {
 		t.Fatal(err)
 	}

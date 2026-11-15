@@ -16,3 +16,21 @@ func TestWindowShortcutModifiers(t *testing.T) {
 		}
 	}
 }
+
+func TestMaskOnlyWinKeysUsedForShortcut(t *testing.T) {
+	h := &Host{}
+	if h.consumeWinMask(0x5B) {
+		t.Fatal("单独按 Win 不应遮罩")
+	}
+	h.markShortcut(true, false)
+	if h.consumeWinMask(0x5C) {
+		t.Fatal("未使用的右 Win 不应遮罩")
+	}
+	if !h.consumeWinMask(0x5B) || h.consumeWinMask(0x5B) {
+		t.Fatal("左 Win 遮罩应只消费一次")
+	}
+	h.markShortcut(true, true)
+	if !h.consumeWinMask(0x5B) || !h.consumeWinMask(0x5C) {
+		t.Fatal("同时按下的两个 Win 应分别遮罩")
+	}
+}

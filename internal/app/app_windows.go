@@ -71,13 +71,13 @@ func Run(ctx context.Context, version string) error {
 	if err != nil {
 		return err
 	}
-	return run(ctx, version, executable, win32.Startup)
+	return run(ctx, version, executable, win32.Startup, win32.SingleInstance)
 }
 
-func run(ctx context.Context, version, executable string, startup func(string, bool) error) error {
+func run(ctx context.Context, version, executable string, startup func(string, bool) error, instance func() (func(), bool, error)) error {
 	runtime.LockOSThread()
 	defer runtime.UnlockOSThread()
-	release, first, err := win32.SingleInstance()
+	release, first, err := instance()
 	if err != nil {
 		return err
 	}

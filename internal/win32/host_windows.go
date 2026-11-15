@@ -61,6 +61,7 @@ type Host struct {
 	taskbarCreated uint32
 	callbacks      []uintptr
 	suppressed     map[uint32]bool
+	maskedWin      uint8
 	closed         bool
 }
 
