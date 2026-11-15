@@ -1,0 +1,15 @@
+README.md:       # 需求
+main.go:         # 程序入口
+go.mod:          # 模块与依赖版本
+go.sum:          # 依赖校验
+VERSION:         # 程序版本号
+build.ps1:       # 构建与发布
+internal/:
+  app/:          # 托盘、快捷键事件和操作流程
+  layout/:       # 布局解析、位置计算和切换规则
+  settings/:     # 用户设置读写与保存位置选择
+  win32/:        # Windows API、窗口、显示器和快捷方式
+layouts/:        # 布局文件
+bin/:            # 构建产物
+doc/:            # 设计
+raw/:            # 原始资源

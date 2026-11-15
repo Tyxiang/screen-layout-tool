@@ -1,0 +1,6 @@
+/bin/
+/.cache/
+/config.ini
+/log.txt
+/*.log
+/*.test.exe
